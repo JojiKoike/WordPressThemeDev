@@ -1,0 +1,8 @@
+source 'https://supermarket.chef.io'
+
+cookbook 'yum'
+cookbook 'yum-epel'
+cookbook 'common', path: './site-cookbooks/common'
+cookbook 'phpenv', path: './site-cookbooks/phpenv'
+cookbook 'apache', path: './site-cookbooks/apache'
+cookbook 'mysql', path: './site-cookbooks/mysql'

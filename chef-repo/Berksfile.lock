@@ -1,0 +1,23 @@
+DEPENDENCIES
+  apache
+    path: site-cookbooks/apache
+  common
+    path: site-cookbooks/common
+  mysql
+    path: site-cookbooks/mysql
+  phpenv
+    path: site-cookbooks/phpenv
+  yum
+  yum-epel
+
+GRAPH
+  apache (0.1.0)
+  common (0.1.0)
+  compat_resource (12.19.0)
+  hostsfile (2.4.5)
+  mysql (0.1.0)
+  phpenv (0.1.0)
+    hostsfile (>= 0.0.0)
+  yum (5.0.1)
+  yum-epel (2.1.2)
+    compat_resource (>= 12.16.3)
