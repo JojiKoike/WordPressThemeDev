@@ -61,6 +61,8 @@ body {
 /* --------------- Contents -------------- */
 .outline a {
   display: block;
+	padding: 20px 0;
+	border-bottom: dotted 2px #dddddd;
   color: #000000;
   text-decoration: none;
 }
