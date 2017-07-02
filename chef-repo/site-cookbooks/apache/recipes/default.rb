@@ -8,7 +8,7 @@
 #
 service 'httpd' do
   action [:enable]
-  support_setting = { status: true, restart: true, reload: true}
+  support_setting = { status: true, restart: true, reload: true }
   supports support_setting
 end
 # For mod rewirte setting
