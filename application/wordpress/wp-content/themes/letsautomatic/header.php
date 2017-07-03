@@ -17,11 +17,13 @@
 </head>
 <body <?php body_class(); ?>>
   <header>
-    <div class="site">
-      <h1>
-        <a href="<?php echo home_url(); ?>">
+    <div class="header-inner">
+      <div class="site">
+        <h1>
+          <a href="<?php echo home_url(); ?>">
             <?php bloginfo('name');?>
-        </a>
-      </h1>
+          </a>
+        </h1>
+      </div>
     </div>
   </header>
