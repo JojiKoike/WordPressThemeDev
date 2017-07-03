@@ -79,6 +79,35 @@ body {
   font-size: 14px;
 }
 
+/* --------------- Sidebar -------------- */
+/* --- Menu --- */
+.sideMenu h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: solid 2px #dddddd;
+  color: #666666;
+  font-size: 18px;
+}
+
+.sideMenu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sideMenu li a {
+  display: block;
+  padding: 10px 5px;
+  color: #000000;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.sideMenu li a:hover {
+  background-color: #eeeeee;
+}
+
+
 /* --------------- Article -------------- */
 /* --- Article --- */
 .article h1 {
