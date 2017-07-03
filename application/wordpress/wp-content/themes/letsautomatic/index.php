@@ -15,7 +15,7 @@
     <?php endif;?>
   </div>
   <div class="sub">
-    SIDEBAR
+    <?php get_sidebar(); ?>
   </div>
 </div>
 <?php get_footer();
