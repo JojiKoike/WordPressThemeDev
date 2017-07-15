@@ -13,3 +13,8 @@ function custom_excerpt_more()
     return '...';
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
+
+// コンテンツの最大幅
+if (!isset($content_width)) {
+    $content_width = 747;
+}
