@@ -7,6 +7,11 @@ Description: This is Let's Automatic official theme.
 Version: 1.0
 */
 
+@font-face {
+    font-family: Orbitron;
+    src: url('webfonts/Orbitron/Orbitron-Regular.ttf') format("truetype");
+}
+
 body {
   margin: 0;
   font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
@@ -83,6 +88,7 @@ header, footer, .container {
 /* --------------- Header -------------- */
 /* --- サイト名 --- */
 .site h1 a {
+  font-family: 'Orbitron';
   display: inline-block;
   padding: 10px;
   background-color: #00a0e9;
@@ -238,7 +244,37 @@ a img {
   border: none;
 }
 
+/* 大きな画像対応 */
 img, .wp-caption {
   max-width: 100%;
   height: auto;
+}
+
+/* 外部コンテンツ */
+iframt {
+    max-width: 100%;
+}
+
+/* Youtubeのビデオ */
+.ytvideo {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.ytvideo iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* アイキャッチ画像 */
+.catch {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
