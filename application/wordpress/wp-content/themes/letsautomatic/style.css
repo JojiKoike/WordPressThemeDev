@@ -143,6 +143,18 @@ header, footer, .container {
   margin-top: 0;
   margin-bottom: 20px;
 }
+/* 投稿日・更新日 */
+.article-date {
+    margin-bottom: 20px;
+    color: #666666;
+    font-size: 12px;
+}
+
+@media (max-width: 599px) {
+    .article-date{
+        font-size: 11px;
+    }
+}
 
 @media (max-width: 599px) {
   .article h1 {
