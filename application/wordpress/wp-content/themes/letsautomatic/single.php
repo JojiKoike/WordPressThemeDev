@@ -1,4 +1,23 @@
 <?php get_header(); ?>
+<div class="sub-header">
+    <div class="bread">
+        <ol>
+            <li>
+                <a href="<?php echo home_url(); ?>">
+                    <i class="fa fa-home"></i>
+                    <span>TOP</span>
+                </a>
+            </li>
+            <li>
+                <?php if (has_category()): ?>
+                <?php $postcat= get_the_category(); ?>
+                <?php echo get_category_parents($postcat[0], true, '</li><li>'); ?>
+                <?php endif;?>
+                <a><?php the_title(); ?></a>
+            </li>
+        </ol>
+    </div>
+</div>
 <div class="container">
   <div class="contents">
     <?php if (have_posts()) : ?>
@@ -6,7 +25,10 @@
             <?php the_post(); ?>
             <article <?php post_class('article') ?>>
                 <h1><?php the_title(); ?></h1>
-                
+                <div class="article-tag">
+                    <i class="fa fa-tags"></i>
+                    <?php the_tags('<ul><li>','</li><li>', '</li></ul>');?>
+                </div>
                 <div class="article-date">
                     <time datetime="<?php echo get_the_date('Y-m-d'); ?>">
                         <i class="fa fa-pencil"></i>
