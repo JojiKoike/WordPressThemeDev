@@ -38,3 +38,12 @@ add_filter('oembed_dataparse','ytwrapper',10,3);
 
 // アイキャッチ画像
 add_theme_support('post-thumbnails');
+
+// 編集画面の設定
+function editor_setting($init) {
+    $init['block_formats'] = "Paragraph=p;Heading 2=h2;"
+            . "Heading 3=h3;Heading 4=h4;"
+            . "Heading 5=h5;Heading 6=h6;Preformatted=pre";
+    return $init;
+}
+add_filter('tiny_mce_before_init', 'editor_setting');
