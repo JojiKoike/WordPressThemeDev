@@ -47,6 +47,30 @@
                 </div>
                 <?php endif; ?>
                 <?php the_content(); ?>
+                
+                <!-- SNS Share -->
+                <div class="share">
+                    <ul>
+                        <li>
+                            <a href="" class="share-tw">
+                                <i class="fa fa-twitter"></i>
+                                <span>Twitter</span> でシェア
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="share-fb">
+                                <i class="fa fa-facebook-official"></i>
+                                <span>Facebook</span> でシェア
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="share-gp">
+                                <i class="fa fa-google-plus-official"></i>
+                                <span>Google+</span> でシェア
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </article>
         <?php endwhile; ?>
     <?php endif; ?>
