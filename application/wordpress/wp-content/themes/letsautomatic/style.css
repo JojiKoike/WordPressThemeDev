@@ -329,6 +329,12 @@ header, footer, .container, .sub-header {
     line-height: 1;
 }
 
+/* ハイライト */
+.highlight {
+    background-color: #ffff00;
+    padding: 0 3px;
+}
+
 /* 投稿日・更新日 */
 .article-date {
     margin-bottom: 20px;

@@ -55,6 +55,11 @@ function editor_setting($init) {
             'title' => '注意書き',
             'block' => 'div',
             'classes' => 'attention'
+        ],
+        [
+            'title' => 'ハイライト',
+            'inline' => 'span',
+            'classes' => 'highlight'
         ]
     ];
 $init['style_formats'] = json_encode($style_formats);
