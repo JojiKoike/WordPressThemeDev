@@ -74,3 +74,8 @@ function add_stylemenu($buttons) {
     return $buttons;
 }
 add_filter('mce_buttons_2', 'add_stylemenu');
+
+// エディタスタイルシート
+add_editor_style();
+add_editor_style(get_template_directory_uri().'/css/normalize.css');
+add_editor_style(get_template_directory_uri().'/css/font-awesome-4.7.0/css/font-awesome.min.css');
