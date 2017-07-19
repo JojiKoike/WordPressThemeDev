@@ -46,7 +46,9 @@
                     <?php the_post_thumbnail('large'); ?>
                 </div>
                 <?php endif; ?>
-                <?php the_content(); ?>
+                <div class="article-body">
+                    <?php the_content(); ?>
+                </div>
                 
                 <!-- SNS Share -->
                 <div class="share">

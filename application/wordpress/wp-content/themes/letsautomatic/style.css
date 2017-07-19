@@ -185,6 +185,9 @@ header, footer, .container, .sub-header {
 }
 
 @media (max-width: 599px) {
+    .article h1 {
+        font-size: 24px;
+    }
     .article h2 {
         padding-left: 21px;
         font-size: 18px;
@@ -196,6 +199,63 @@ header, footer, .container, .sub-header {
         padding-left: 6px;
         font-size: 15px;
     }
+    .article p {
+        font-size: 14px;
+    }
+    
+}
+
+.article-body ul {
+    list-style: none;
+}
+
+/** 番号なしリストのみに適用 */
+.article-body ul > li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.article-body li:before {
+    position: absolute;
+    left: 0px;
+    top: 3px;
+    content: '\f069';
+    color: #aaaaaa;
+    font-family: 'FontAwesome';
+    line-height: 1;
+}
+
+/* 引用 */
+.article-body blockquote {
+    position: relative;
+    margin: 30px auto;
+    padding: 20px 40px 1px 50px;
+    max-width: 460px;
+    color: #444444;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.article-body blockquote:before {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    content: '\f10d';
+    color: #aaaaaa;
+    font-size: 30px;
+    font-family: 'FontAwesome';
+    line-height: 1;
+}
+
+.article-body blockquote:after {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    content: '\f10e';
+    color: #aaaaaa;
+    font-size: 30px;
+    font-family: 'FontAwesome';
+    line-height: 1;
 }
 
 /* 投稿日・更新日 */
