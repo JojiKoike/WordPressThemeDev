@@ -142,6 +142,10 @@ header, footer, .container, .sub-header {
   font-size: 14px;
 }
 
+.outline .article-date {
+    margin-bottom: 8px;
+}
+
 /* --------------- Article -------------- */
 /* --- Article --- */
 .article h1 {
