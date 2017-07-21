@@ -30,8 +30,8 @@
                     <?php the_tags('<ul><li>','</li><li>', '</li></ul>');?>
                 </div>
                 <div class="article-date">
+                    <i class="fa fa-pencil"></i>
                     <time datetime="<?php echo get_the_date('Y-m-d'); ?>">
-                        <i class="fa fa-pencil"></i>
                         投稿:<?php echo get_the_date('Y年m月d日'); ?>
                     </time>
                     <?php if(get_the_modified_date('Ymd') > get_the_date('Ymd')): ?>
