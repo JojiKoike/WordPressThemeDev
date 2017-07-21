@@ -41,7 +41,7 @@
                     </time>
                     <?php endif; ?>
                 </div>
-                <?php if (has_post_thumbnail()): ?>
+                <?php if (has_post_thumbnail() && $page==1): ?>
                 <div class="catch">
                     <?php the_post_thumbnail('large'); ?>
                 </div>
@@ -49,7 +49,12 @@
                 <div class="article-body">
                     <?php the_content(); ?>
                 </div>
-                
+                <?php wp_link_pages([
+                    'before' => '<div class="pagination"><ul><li>',
+                    'separator' => '</li><li>',
+                    'after' => '</li></ul></div>',
+                    'pagelink' => '<span>%</span>'
+                ]); ?>
                 <!-- SNS Share -->
                 <div class="share">
                     <ul>
