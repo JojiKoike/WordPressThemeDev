@@ -20,7 +20,7 @@
     href="<?php echo get_stylesheet_uri(); ?>?var=<?php echo date('U'); ?>">
 
   <!-- Meta Data -->
-  <?php if (is_single()): ?>
+  <?php if (is_single() || is_page()): ?>
   <!-- Traditional Metadata -->
   <meta name="description" 
         content="<?php echo wp_trim_words($post->post_content, 100, '...'); ?>">
