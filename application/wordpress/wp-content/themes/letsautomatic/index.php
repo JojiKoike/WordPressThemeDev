@@ -7,6 +7,7 @@
             <?php the_post(); ?>
             <article <?php post_class('outline'); ?>>
               <a href="<?php the_permalink(); ?>">
+                  <img src="<?php echo mythumb('medium'); ?>" alt="">
                 <h1><?php the_title(); ?></h1>
                 <?php the_excerpt(); ?>
               </a>
