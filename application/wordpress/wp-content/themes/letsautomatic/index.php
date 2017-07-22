@@ -22,6 +22,13 @@
             </article>
         <?php endwhile; ?>
     <?php endif;?>
+    <div class="pagination pagination-index">
+        <?php echo paginate_links([
+            'type' => 'list',
+            'prev_text' => '&laquo;',
+            'next_text' => '&raquo;'
+        ]);?>
+    </div>
   </div>
   <div class="sub">
     <?php get_sidebar(); ?>

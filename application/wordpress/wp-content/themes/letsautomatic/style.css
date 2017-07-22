@@ -621,6 +621,32 @@ header, footer, .container, .sub-header {
     width: auto;
 }
 
+/* 記事一覧のページネーション */
+.pagination-index li .dots {
+    padding: 6px 2px;
+    border-color:  transparent;
+    background-color: transparent;
+}
+
+@media (max-width: 599px) {
+    .pagination-index li a,
+    .pagination-index li > span {
+        margin: 0;
+        padding: 6px 7px;
+        border-left: none;
+        font-size: 12px;
+    }
+    
+    .pagination-index li:first-child a,
+    .pagination-index li:first-child > span {
+        border-left: solid 1px #cccccc;
+    }
+    
+    .pagination-index li .dots {
+        border-right-color: #cccccc;
+    }
+}
+
 /* --------------- Sidebar -------------- */
 /* --- Menu --- */
 .sideMenu h2 {
