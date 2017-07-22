@@ -49,6 +49,7 @@
     <meta property="og:image" 
           content="<?php echo get_template_directory_uri(); ?>/sample.jpg">
   <?php endif; ?>
+    <meta property="og:image" content="<?php echo mythumb('large'); ?>">
   <?php endif; ?>
     <meta property="og:site_name" content="<?php bloginfo('name'); ?>">
     <meta property="og:locale" content="ja_JP">

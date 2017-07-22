@@ -121,7 +121,7 @@ header, footer, .container, .sub-header {
   font-size: 14px;
 }
 
-/* --------------- Contents -------------- */
+/* --------------- Outline -------------- */
 .outline a {
   display: block;
 	padding: 20px 0;
@@ -132,6 +132,24 @@ header, footer, .container, .sub-header {
 .outline a:hover {
   background-color: #eeeeee;
 }
+
+.outline a:after {
+    content:"";
+    display: block;
+    clear: both;
+}
+
+.outline img {
+    float: left;
+    width: 200px;
+}
+
+.outline .text {
+    float: none;
+    width: auto;
+    margin-left: 230px;
+}
+
 .outline h1 {
   margin-top: 0;
   margin-bottom: 10px;
@@ -140,6 +158,37 @@ header, footer, .container, .sub-header {
 .outline p {
   margin: 0;
   font-size: 14px;
+}
+
+.outline .article-date {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 599px) {
+    .outline a {
+        padding: 10px 0;
+    }
+
+    .outline img {
+        width: 100px;
+    }
+
+    .outline .text {
+        margin-left: 110px;
+    }
+
+    .outline h1 {
+        font-size: 16px;
+    }
+    
+    .outline p {
+        visibility: hidden;
+        margin: 0;
+    }
+
+    .outline .article-date {
+        margin-bottom: 0;
+    }
 }
 
 /* --------------- Article -------------- */
