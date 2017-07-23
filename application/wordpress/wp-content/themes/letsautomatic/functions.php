@@ -80,7 +80,7 @@ add_editor_style();
 add_editor_style(get_template_directory_uri().'/css/normalize.css');
 add_editor_style(get_template_directory_uri().'/css/font-awesome-4.7.0/css/font-awesome.min.css');
 
-// サムネイル画像
+// サムネイル画像出力処理
 function mythumb($size) {
     if (has_post_thumbnail()) {
         $postthumb = wp_get_attachment_image_src(get_post_thumbnail_id(), $size);
