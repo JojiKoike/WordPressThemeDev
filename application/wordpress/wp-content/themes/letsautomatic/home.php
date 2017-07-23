@@ -4,6 +4,13 @@
       
     <!---------- Article List Start ---------->
     
+    <!----- 1件目だけを大きく表示する ----->
+    <?php if (have_posts()) : ?>
+        <?php the_post(); ?>
+        <?php get_template_part('outline', 'large'); ?>
+    <?php endif;?>
+    
+    <!----- 2件目以降は普通サイズ表示 ----->
     <?php if (have_posts()) : ?>
         <?php while (have_posts()) : ?>
             <?php the_post(); ?>

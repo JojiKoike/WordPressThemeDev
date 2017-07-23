@@ -191,6 +191,62 @@ header, footer, .container, .sub-header {
     }
 }
 
+/* Outline (large) */
+.outline-large a {
+    display: block;
+    padding: 20px 0;
+    border-bottom: dotted 2px #dddddd;
+    color: #000000;
+    text-decoration: none;
+}
+
+.outline-large:first-child a {
+    padding-top: 0;
+}
+
+.outline-large a:hover {
+    background-color: #eeeeee;
+}
+
+.outline-large h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+.outline-large p {
+    margin: 0;
+    font-size: 14px;
+}
+.outline-large .article-date {
+    margin-bottom: 8px;
+}
+
+.outline-large .thumb {
+    width: 100%;
+    height: 330px;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+@media (max-width: 599px) {
+    .outline-large a {
+        padding: 10px 0;
+    }
+    
+    .outline-large h1 {
+        font-size: 18px;
+    }
+    
+    .outline-large p {
+        font-size: 12px;
+    }
+    
+    .outline-large .thumb {
+        height: 200px;
+    }
+}
+
 /* --------------- Article -------------- */
 /* --- Article --- */
 .article h1 {
