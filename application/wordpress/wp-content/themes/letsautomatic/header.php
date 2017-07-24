@@ -51,6 +51,53 @@
   <?php endif; ?>
     <meta property="og:image" content="<?php echo mythumb('large'); ?>">
   <?php endif; ?>
+  
+    <!---- トップページ用メタデータ Start----->
+    <?php if (is_home()): ?>
+        <meta name="description" content="<?php bloginfo('description'); ?>">
+
+        <?php $allcats = get_categories();
+        $twds = array();
+        foreach ($allcats as $allcat) {
+            $twds[] = $allcat->name;
+        } ?>
+        <meta name="keywords" content="<?php echo implode(',', $twds);?>">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="<?php bloginfo('name');?>">
+        <meta property="og:url" content="<?php home_url('/'); ?>">
+        <meta property="og:description" content="<?php bloginfo('description');?>">
+        <meta property="og:image" content="<?php echo get_template_directory_uri();?>/sample.jpg">
+    <?php endif; ?>
+    <!---- トップページ用メタデータ End----->
+        
+    <!-- カテゴリー・タグページ用メタデータ Start -->
+    <?php if (is_category() || is_tag()):
+        if (is_category()) {
+            $termid = $cat;
+            $taxname = 'category';
+        } else if (is_tag()) {
+            $termid = $tag_id;
+            $taxname = 'post_tag';
+        }
+    ?>
+        <meta name="description" content="<?php single_term_title(); ?>">
+        <?php $childcats = get_categories(['child_of' => $termid]);
+        $kwds = array();
+        $kwds[] = single_term_title('', false);
+        foreach($childcats as $childcat) {
+            $kwds[] = $childcat->name;
+        }
+        ?>
+        <meta name="keywords" content="<?php echo implode(',', $kwds);?>">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="<?php single_term_title(); ?>に関する記事 | <?php bloginfo('name'); ?>">
+        <meta property="og:url" content="<?php echo get_term_link($termid, $taxname)?>">
+        <meta property="og:description" content="<?php single_term_title(); ?>に関する記事の一覧です。">
+        <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/sample.jpg">
+    <?php endif; ?>
+    <!-- カテゴリー・タグページ用メタデータ End -->
+
+    
     <meta property="og:site_name" content="<?php bloginfo('name'); ?>">
     <meta property="og:locale" content="ja_JP">
     
