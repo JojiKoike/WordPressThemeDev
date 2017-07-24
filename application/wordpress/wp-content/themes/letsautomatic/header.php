@@ -18,7 +18,7 @@
         href="<?php echo get_template_directory_uri();?>/css/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet"
     href="<?php echo get_stylesheet_uri(); ?>?var=<?php echo date('U'); ?>">
-
+  
   <!-- Meta Data -->
   <?php if (is_single() || is_page()): ?>
   <!-- Traditional Metadata -->
@@ -30,7 +30,7 @@
  foreach ($tags as $tag) {
      $kwds[] = $tag->name;
  }?>
-  <meta name="keywords" content="<?php echo implode(',', $kwds); ?>">
+  <meta name="keywords" content="<?php echo implode(',', $kwds); ?>" >
   <?php endif; ?>
   <!-- OGP -->
   <meta property="og:type" content="article">
@@ -116,6 +116,17 @@
             <?php bloginfo('name');?>
           </a>
         </h1>
+      </div>
+      <div class="sitenav">
+          <button type="button" id="navbtn">
+              <i class="fa fa-bars"></i><span>MENU</span>
+          </button>
+          <?php wp_nav_menu([
+              'theme_location' => 'sitenav',
+              'container' => 'nav',
+              'container_class' => 'mainmenu',
+              'container_id' => 'mainmenu'
+          ]); ?>
       </div>
     </div>
   </header>

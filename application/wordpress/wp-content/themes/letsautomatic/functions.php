@@ -1,5 +1,15 @@
 <?php
 
+// ライブラリーの読み込み
+function load_library() {
+    // ----- jQuery ------ //
+    // WordPress標準のjQueryを読み込まない
+    wp_deregister_script('jquery');
+    // 公式のjQueryを読み込む
+    wp_enqueue_script('jquery', get_template_directory_uri() .'/js/jquery-3.2.1.min.js');
+}
+add_action('wp_enqueue_scripts', 'load_library');
+
 // 概要（抜粋）の文字数
 function custom_excerpt_mblength()
 {
@@ -90,3 +100,12 @@ function mythumb($size) {
     }
     return $url;
 }
+
+// カスタムメニュー
+register_nav_menu('sitenav', 'サイトナビゲーション');
+
+// メニューのトグルボタン
+function navbtn_scripts() {
+    wp_enqueue_script('navbtn-script', get_template_directory_uri() .'/js/navbtn.js', ['jquery']);
+}
+add_action('wp_enqueue_scripts', 'navbtn_scripts');
