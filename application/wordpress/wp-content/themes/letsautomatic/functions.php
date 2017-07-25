@@ -103,6 +103,7 @@ function mythumb($size) {
 
 // カスタムメニュー
 register_nav_menu('sitenav', 'サイトナビゲーション');
+register_nav_menu('recommendnav', 'おすすめ記事');
 
 // メニューのトグルボタン
 function navbtn_scripts() {
