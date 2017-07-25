@@ -1,3 +1,7 @@
+<?php // 広告
+ dynamic_sidebar('ad');
+?>
+
 <?php
 $location_name = 'recommendnav';
 $locations = get_nav_menu_locations();
