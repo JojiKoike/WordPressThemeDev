@@ -17,6 +17,10 @@ if ($myPosts) : ?>
             </div>
             <div class="text">
                 <?php the_title(); ?>
+                <?php if (has_category()): ?>
+                    <?php $postcat = get_the_category(); ?>
+                    <span><?php echo $postcat[0]->name; ?></span>
+                <?php endif; ?>
             </div>
         </a>
       </li>

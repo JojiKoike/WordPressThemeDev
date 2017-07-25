@@ -758,6 +758,12 @@ header, footer, .container, .sub-header {
     margin-left: 75px;
 }
 
+.sideMenu-thumb li span {
+    display: block;
+    color: #666666;
+    font-size: 12px;
+}
+
 /** ---------------- images ----------------- **/
 /* キャプション */
 .wp-caption-text {
