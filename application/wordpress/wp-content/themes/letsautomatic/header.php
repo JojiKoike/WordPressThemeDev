@@ -111,11 +111,14 @@
   <header>
     <div class="header-inner">
       <div class="site">
-        <h1>
-          <a href="<?php echo home_url(); ?>">
-            <?php bloginfo('name');?>
-          </a>
-        </h1>
+            <h1>
+                <a href="<?php echo home_url(); ?>">
+                    <?php bloginfo('name');?>
+                </a>
+            </h1>
+            <div class="site-description">
+                <?php echo bloginfo('description'); ?>
+            </div>
       </div>
       <div class="sitenav">
           <button type="button" id="navbtn">
