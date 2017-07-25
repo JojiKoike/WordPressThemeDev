@@ -109,3 +109,20 @@ function navbtn_scripts() {
     wp_enqueue_script('navbtn-script', get_template_directory_uri() .'/js/navbtn.js', ['jquery']);
 }
 add_action('wp_enqueue_scripts', 'navbtn_scripts');
+
+// 前後の記事に関するメタデータの出力を禁止
+// Firefox先読みによる記事表示回数ノイズ対策
+remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+
+// クローラー (BOT)からのアクセスを判別
+function is_bot() {
+    $ua = $_SERVER['HTTP_USER_AGENT'];
+    
+    $bots = ['googlebot', 'msnbot', 'yahoo'];
+    
+    foreach($bots as $bot) {
+        if (stripos($ua, $bot) !== false) {
+            return true;
+        }
+    }
+}
