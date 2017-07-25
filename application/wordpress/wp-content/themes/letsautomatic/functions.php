@@ -127,3 +127,19 @@ function is_bot() {
         }
     }
 }
+
+// ウィジェットエリア
+register_sidebar([
+    'id' => 'submenu',
+    'name' => 'サブメニュー',
+    'description' => 'サイドバーに表示するウィジェットを指定。',
+    'before_widget' => '<aside id="%1$s" class="sideMenu widget %2$s',
+    'after_widget' => '</aside>',
+    'before_title' => '<h2 class="widgettitle">',
+    'after_title' => '</h2>'
+]);
+
+// 検索フォーム
+add_theme_support('html5',[
+   'search-form' 
+]);

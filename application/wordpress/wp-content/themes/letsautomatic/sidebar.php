@@ -58,4 +58,7 @@ if ($myPosts) : ?>
   </ul>
 </aside>
 <?php wp_reset_postdata(); ?>
-<?php endif;
+<?php endif; ?>
+<?php // 検索フォーム
+    dynamic_sidebar('submenu'); 
+?>
