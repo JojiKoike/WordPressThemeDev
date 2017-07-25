@@ -731,6 +731,39 @@ header, footer, .container, .sub-header {
   background-color: #eeeeee;
 }
 
+/* サムネイル画像を付けたメニューのデザイン */
+.sideMenu-thumb li a {
+    padding: 5px 0;
+    border-bottom: dotted 1px #dddddd;
+    color: #2288bb;
+}
+
+.sideMenu-thumb li a:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.sideMenu-thumb li .thumb {
+    float: left;
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.sideMenu-thumb li .text {
+    float: none;
+    width: auto;
+    margin-left: 75px;
+}
+
+.sideMenu-thumb li span {
+    display: block;
+    color: #666666;
+    font-size: 12px;
+}
+
 /** ---------------- images ----------------- **/
 /* キャプション */
 .wp-caption-text {
