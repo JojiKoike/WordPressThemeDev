@@ -14,6 +14,7 @@ Version: 1.0
 
 body {
   margin: 0;
+  padding: 0 10px;
   font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
   line-height: 1.5;
 }
@@ -62,15 +63,16 @@ header, footer, .container, .sub-header {
   padding-right: 15px;
 }
 
-@media (min-width: 1040px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+   /* 全体の横幅 */
   .container, .header-inner, .footer-inner, .sub-header{
-    max-width: 1000px;
+    max-width: 747px;
     margin-left: auto;
     margin-right: auto;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   /* コンテンツとサイドバーを横に並べる設定 */
   .container:after {
     content: "";
@@ -79,15 +81,16 @@ header, footer, .container, .sub-header {
   }
   .contents {
     float: left;
-    width: 75%;
+    width: 100%;
+    margin-right: -300px;
   }
   .sub {
     float: left;
-    width: 25%;
+    width: 300px;;
   }
   /* コンテンツとサイドバーの間隔 */
   .contents {
-    padding-right: 50px;
+    padding-right: 350px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -799,7 +802,7 @@ header, footer, .container, .sub-header {
     box-sizing: border-box;
 }
 
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 400px) and (max-width: 1023px) {
     .sideMenu-large ul:after {
         content: "";
         display: block;
@@ -916,6 +919,11 @@ header, footer, .container, .sub-header {
     display: inline-block;
     color: #2288bb;
     text-decoration: none;
+}
+
+/* 広告 */
+.myad {
+    text-align: center;
 }
 
 /** ---------------- images ----------------- **/

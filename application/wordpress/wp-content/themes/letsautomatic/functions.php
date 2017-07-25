@@ -133,7 +133,18 @@ register_sidebar([
     'id' => 'submenu',
     'name' => 'サブメニュー',
     'description' => 'サイドバーに表示するウィジェットを指定。',
-    'before_widget' => '<aside id="%1$s" class="sideMenu widget %2$s',
+    'before_widget' => '<aside id="%1$s" class="sideMenu widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h2 class="widgettitle">',
+    'after_title' => '</h2>'
+]);
+
+// 広告
+register_sidebar([
+    'id' => 'ad',
+    'name' => '広告',
+    'description' => 'サイドバーに表示する広告を指定。',
+    'before_widget' => '<aside id="%1$s" class="myad sideMenu widget %2$s">',
     'after_widget' => '</aside>',
     'before_title' => '<h2 class="widgettitle">',
     'after_title' => '</h2>'
