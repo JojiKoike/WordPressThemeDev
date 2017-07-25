@@ -154,3 +154,9 @@ register_sidebar([
 add_theme_support('html5',[
    'search-form' 
 ]);
+
+// ページトップへ戻るボタン
+function backtotopbtn_scripts() {
+    wp_enqueue_script('backtotopbtn-script', get_template_directory_uri() .'/js/backtopagetop.js', ['jquery']);
+}
+add_action('wp_enqueue_scripts', 'backtotopbtn_scripts');
