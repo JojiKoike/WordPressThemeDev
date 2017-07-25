@@ -100,21 +100,24 @@ header, footer, .container, .sub-header {
 
 /* --------------- Header -------------- */
 /* --- サイト名 --- */
-.site h1 a {
-  font-family: 'Orbitron';
-  display: inline-block;
-  padding: 10px;
-  background-color: #00a0e9;
-  color: #ffffff;
-  text-decoration: none;
-}
-
 .site h1 {
-  margin: 0;
-  font-family: 'Arial Black', sans-serif;
-  font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 38px;
 }
 
+.site h1 a {
+    font-family: 'Orbitron';
+    display: inline-block;
+    color: #000000;
+    text-decoration: none;
+}
+
+.site .site-description{
+    font-family: 'Arial Black', sans-serif;
+    font-size: 16px;
+}
 
 /* --------------- Footer -------------- */
 /* --- コピーライト --- */
