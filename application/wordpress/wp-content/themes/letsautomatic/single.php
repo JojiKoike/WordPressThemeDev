@@ -78,6 +78,43 @@
                         </li>
                     </ul>
                 </div>
+                
+            <?php // 関連記事
+            if (has_category()) {
+                $cats = get_the_category();
+                $catkwds = array();
+                foreach ($cats as $cat) {
+                    $catkwds[] = $cat->term_id;
+                }
+            }
+            $myPosts = get_posts([
+                'post_type' => 'post',
+                'posts_per_page' => '4',
+                'post__not_in' => [$post->ID],
+                'category__in' => $catkwds,
+                'orderby' => 'rand'
+            ]);
+            if ($myPosts) : ?>
+            <aside class="sideMenu sideMenu-thumb sideMenu-related">
+            <h2>関連記事</h2>
+            <ul>
+                <?php foreach ($myPosts as $post) :
+                setup_postdata($post); ?>
+                    <li>
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="thumb" style="background-image: url(<?php echo mythumb('thumbnail'); ?>)">
+                            </div>
+                            <div class="text">
+                                <?php the_title(); ?>
+                            </div>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+            </aside>
+            <?php wp_reset_postdata();
+            endif; ?>
+                
             </article>
         <?php endwhile; ?>
     <?php endif; ?>
