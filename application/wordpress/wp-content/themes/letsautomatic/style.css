@@ -24,7 +24,7 @@ body {
 /* --- ヘッダーとフッターをバーの形にする設定 --- */
 header {
   border-bottom: solid 1px #dddddd;
-  background-color: #f6f6f6;
+  background-color: #ffffff;
 }
 
 footer {
