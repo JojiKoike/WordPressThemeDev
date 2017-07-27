@@ -262,7 +262,6 @@ header, footer, .container, .sub-header {
   margin-bottom: 10px;
   font-size: 36px;
   word-wrap: break-word;
-  -ms-word-break: break-all;
 }
 .article p {
   margin-top: 0;
