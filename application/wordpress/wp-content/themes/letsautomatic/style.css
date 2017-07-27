@@ -160,6 +160,7 @@ header, footer, .container, .sub-header {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 20px;
+  word-wrap: break-word; /* 長い単語タイトル対策 */
 }
 .outline p {
   margin: 0;
@@ -218,6 +219,7 @@ header, footer, .container, .sub-header {
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 26px;
+    word-wrap: break-word;
 }
 
 .outline-large p {
@@ -259,6 +261,7 @@ header, footer, .container, .sub-header {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 36px;
+  word-wrap: break-word;
 }
 .article p {
   margin-top: 0;
