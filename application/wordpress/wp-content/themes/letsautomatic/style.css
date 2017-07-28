@@ -93,6 +93,9 @@ header, footer, .container, .sub-header {
   font-family: 'Arial Black', sans-serif;
   font-size: 16px; }
 
+@media (max-width: 499px) {
+  .site .site-description {
+    font-size: 11px; } }
 /* --------------- Footer -------------- */
 /* --- コピーライト --- */
 .copyright p {
